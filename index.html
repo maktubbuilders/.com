@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Maktub Builders</title>
+  <link rel="icon" href="makimg/favicon (5).ico" type="image/x-icon" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      position: relative;
+    }
+
+    header img.logo {
+      width: 100%;
+      height: auto;
+    }
+
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px 15px;
+      border-radius: 8px;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .whatsapp-icon {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 999;
+    }
+
+    .whatsapp-icon img {
+      width: 100px;
+      height: auto;
+    }
+
+    .top-slideshow {
+      position: relative;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    .top-slideshow img {
+      width: 100%;
+      display: none;
+    }
+
+    section {
+      padding: 30px 20px;
+    }
+
+    .view-more-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      text-decoration: none;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .view-more-btn:hover {
+      background-color: #555;
+    }
+
+    /* Toggle reveal */
+    #mission-vision {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.6s ease-in-out, padding 0.6s ease;
+      padding: 0 20px;
+    }
+
+    #mission-vision.visible {
+      max-height: 500px;
+      padding: 30px 20px;
+    }
+
+    .properties-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .property-image {
+      width: 30%;
+      min-width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .last-property {
+      width: 30%;
+      min-width: 200px;
+      height: 200px;
+      object-fit: cover;
+      margin: 20px auto;
+      display: block;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      background-color: #f2f2f2;
+      border-radius: 8px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #333;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #555;
+    }
+
+    footer {
+      padding: 30px 20px;
+      background-color: #333;
+      color: white;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav {
+        position: static;
+        text-align: center;
+        background: #444;
+        margin-bottom: 10px;
+      }
+
+      .properties-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .property-image,
+      .last-property {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img class="logo" src="makimg/MAKTUb1st.jpg" alt="Maktub Builders Logo" />
+
+  <!-- Top-right Navigation -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:+91 73063 48802">Call Us</a>
+  </nav>
+</header>
+
+<!-- Slideshow -->
+<div class="top-slideshow">
+  <img class="slide-top" src="makimg/Image 7.jpeg" alt="Slide 1" />
+  <img class="slide-top" src="makimg/image  3.jpeg" alt="Slide 2" />
+  <img class="slide-top" src="makimg/Image 5.jpeg" alt="Slide 3" />
+</div>
+
+<!-- WhatsApp -->
+<div class="whatsapp-icon">
+  <a href="https://wa.me/7306348802" target="_blank">
+    <img src="makimg/download-removebg-preview.png" alt="WhatsApp" />
+  </a>
+</div>
+
+<!-- About -->
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+  At Maktub Builders, we are a team of professional engineers dedicated to turning your 
+dream home into reality. With expertise in innovative design and quality craftsmanship, we 
+build structures that stand the test of time. Whether residential or commercial, our 
+commitment to excellence ensures that every project is delivered with precision, durability, 
+and aesthetic appeal.  </p>
+  <div class="view-more-btn" onclick="toggleViewMore(this)">View More</div>
+</section>
+
+<!-- Mission/Vision (hidden initially) -->
+<section id="mission-vision">
+  <h3>Mission</h3>
+  <p>
+Our mission is to build high-quality, sustainable, and innovative structures that exceed 
+client expectations. With a commitment to precision, durability, and modern engineering, 
+we strive to create safe and aesthetically appealing spaces. At Maktub Construction, we 
+turn visions into reality with professionalism, integrity, and excellence.  </p>
+
+  <h3>Vision</h3>
+  <p>
+To be a leading construction company known for excellence, innovation, and reliability. We 
+aim to shape skylines, build sustainable communities, and set new industry standards by 
+combining engineering expertise with modern design. Our vision is to create lasting 
+structures that inspire and improve lives.  </p>
+</section>
+
+<!-- Featured Properties -->
+<section id="BUILD YOUR DREAM WITH US!">
+  <h2>BUILD YOUR DREAM WITH US!</h2>
+  <div class="properties-grid">
+    <img class="property-image" src="makimg/image1.jpeg" alt="Property 1" />
+    <img class="property-image" src="makimg/Image 2.jpeg" alt="Property 2" />
+    <img class="property-image" src="makimg/image  3.jpeg" alt="Property 3" />
+    <img class="property-image" src="makimg/Image 4.jpeg" alt="Property 4" />
+    <img class="property-image" src="makimg/Image 6.jpeg" alt="Property 5" />
+    <img class="property-image" src="makimg/Image 7.jpeg" alt="Property 6" />
+  </div>
+  <img class="last-property" src="makimg/Image 5.jpeg" alt="Property 7" />
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <h2>Contact Us</h2>
+  <form action="https://formsubmit.co/maktubbuilders@gmail.com" method="POST">
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" required />
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required />
+
+  <label for="phone">Phone Number</label>
+  <input type="tel" id="phone" name="phone" required />
+
+  <input type="submit" value="Submit" />
+</form>
+
+</section>
+
+<!-- Footer -->
+<footer>
+	<footer>
+  <p><strong>Address:</strong> Thamanna Tower, West Hill, Chungam, Kozhikode, 673005</p>
+
+  <p>
+    <strong>Follow us:</strong>
+    <a href="https://www.instagram.com/maktub_builders?igsh=dzBkN2F0NWo4bnJv" target="_blank">
+      <img src="makimg/instgm icon.png" alt="Instagram" style="width:24px;height:24px;vertical-align:middle;">
+    </a>
+  </p>
+
+  <p><strong>Privacy Policy:</strong> We respect your privacy and do not share your data with third parties.</p>
+  <p><strong>Disclaimer:</strong> All property details are subject to change and for illustrative purposes only.</p>
+  <p>&copy; 2025 Maktub Builders. All rights reserved.</p>
+</footer>
+
+  
+
+<!-- Scripts -->
+<script>
+  // Top Slideshow
+  let topIndex = 0;
+  const topSlides = document.getElementsByClassName("slide-top");
+
+  function showTopSlides() {
+    for (let i = 0; i < topSlides.length; i++) {
+      topSlides[i].style.display = "none";
+    }
+    topIndex++;
+    if (topIndex > topSlides.length) topIndex = 1;
+    topSlides[topIndex - 1].style.display = "block";
+    setTimeout(showTopSlides, 3000);
+  }
+
+  showTopSlides();
+
+  // Toggle Mission/Vision
+  function toggleViewMore(button) {
+    const section = document.getElementById("mission-vision");
+    section.classList.toggle("visible");
+    section.scrollIntoView({ behavior: "smooth" });
+    button.textContent =
+      section.classList.contains("visible") ? "Hide" : "View More";
+  }
+</script>
+
+</body>
+</html>
